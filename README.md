@@ -1,245 +1,376 @@
-# 第10回振り返りレポート
+1.	GitHubユーザー名
+Yuri-0708
 
-## 1. GitHubアカウント
-
-| 氏名           | 学籍番号    | GitHubアカウント(登録メールアドレス) |
-| -------------- | ----------- | -------------------------------------- |
-| 吉田佑吏     | K20125      | Yuri-0708 (yuuri2313@gmail.com) |
-
-## 2. 作成した日記リポジトリのコミットログ
-
-チームのOrganaizationにて作成した日記リポジトリをcloneしたローカルディレクトリにて、mainブランチをfetch/pullした後に、`$ git --no-pager log --graph`を実行し、結果を以下の`<rpe>〜</pre>`内に貼り付けます。
+2.	担当箇所 (できる限り詳しく書くこと)
+Webインタフェースを担当しました。
+Flaskを利用し、他のメンバーが作成したhtmlファイルへのルーティング処理を記述し、ファイルの保存を行う処理を記述しました。(前回の時間では、ファイルの保存を行う処理の中でエラーが発生して作業がストップしてしまいました。)
+3. チーム作業のログ
+mainブランチを最新の状態にして $ git --no-pager log --graph
+した結果を <pre> タグと組み合わせて貼り付ける
 
 <pre>
-* commit a36c78911864551f7dff5754a710204efc78dd87 (HEAD -> main, origin/main, origin/HEAD)
-| Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-| Date:   Thu Dec 8 20:30:17 2022 +0900
-| 
-|     修正
-| 
-* commit 7f88f25bf5f81fdc193667633d032d210b9c2d88 (origin/sakaguchi-disry-add)
-| Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-| Date:   Thu Dec 8 16:23:32 2022 +0900
-| 
-|     修正
-|   
-*   commit 7ca389795ab6f2a55746cbd7c735e7a8daac5e4e
-|\  Merge: 3eb7ce0 70d054e
+*   commit 36716edb8b76089137b72046ad9de4b8dde46bfa (HEAD -> main, origin/main, origin/HEAD)
+|\  Merge: e43ae40 90e3388
 | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-| | Date:   Thu Dec 8 16:22:25 2022 +0900
+| | Date:   Wed Dec 21 22:39:23 2022 +0900
 | | 
-| |     Merge pull request #7 from 2022AIT-OOP2-G11/maeno-diary
+| |     Merge pull request #16 from 2022AIT-OOP2-G11/anser_reference
 | |     
-| |     前野日記新規追加
-| |   
-| *   commit 70d054e22e87566a8ba0e83f1612f5276448ac76 (origin/maeno-diary)
-| |\  Merge: 75e1f5a 3eb7ce0
-| |/  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-|/|   Date:   Thu Dec 8 16:22:18 2022 +0900
-| |   
-| |       Merge branch 'main' into maeno-diary
-| |   
-* |   commit 3eb7ce0b6d5e98805ccdf27c4986fe5ebed0e4cb
-|\ \  Merge: 1c89b9c 6bedd5e
-| | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-| | | Date:   Thu Dec 8 16:21:03 2022 +0900
-| | | 
-| | |     Merge pull request #5 from 2022AIT-OOP2-G11/kuzuya-diary-add
-| | |     
-| | |     葛谷の日記を新規追加
-| | |   
-| * |   commit 6bedd5e599964f149a396237d871adb7f7b85dba (origin/kuzuya-diary-add)
-| |\ \  Merge: 74a35f2 1c89b9c
-| |/ /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-|/| |   Date:   Thu Dec 8 16:20:55 2022 +0900
-| | |   
-| | |       Merge branch 'main' into kuzuya-diary-add
-| | |   
-* | |   commit 1c89b9cef09b343dfd9127364fcda5e33ea7f09e
-|\ \ \  Merge: d46aa6b f0bd375
-| | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-| | | | Date:   Thu Dec 8 16:19:30 2022 +0900
-| | | | 
-| | | |     Merge pull request #4 from 2022AIT-OOP2-G11/Nagata-add-diary
-| | | |     
-| | | |     永田の日記新規追加
-| | | |   
-| * | |   commit f0bd375af545fa5ef828907554b32c6e6b7c27b8 (origin/Nagata-add-diary)
-| |\ \ \  Merge: b13985e d46aa6b
-| |/ / /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-|/| | |   Date:   Thu Dec 8 16:19:02 2022 +0900
-| | | |   
-| | | |       Merge branch 'main' into Nagata-add-diary
-| | | |   
-* | | |   commit d46aa6b8830e8d5f2e5ae8971665604e1667b2b9
-|\ \ \ \  Merge: a3aa55c 6cc8420
-| | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-| | | | | Date:   Thu Dec 8 16:18:25 2022 +0900
-| | | | | 
-| | | | |     Merge pull request #2 from 2022AIT-OOP2-G11/doi-diary-add
-| | | | |     
-| | | | |     どいの日記
-| | | | |   
-| * | | |   commit 6cc84203ca571fc059aba5580e78926d15139671 (origin/doi-diary-add)
-| |\ \ \ \  Merge: c8281f8 a3aa55c
-| |/ / / /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-|/| | | |   Date:   Thu Dec 8 16:18:17 2022 +0900
-| | | | |   
-| | | | |       Merge branch 'main' into doi-diary-add
-| | | | |   
-* | | | |   commit a3aa55cc13b3db1053b37c0c3c932a13014591cf
-|\ \ \ \ \  Merge: f609c16 5ba6018
-| | | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-| | | | | | Date:   Thu Dec 8 16:17:10 2022 +0900
-| | | | | | 
-| | | | | |     Merge pull request #6 from Yuuri-0708/yosida-diary-add
-| | | | | |     
-| | | | | |     よしだの日記を新規追加
-| | | | | |   
-| * | | | |   commit 5ba6018482457776a6466fc5ad1e582964fba118
-| |\ \ \ \ \  Merge: a73ffd7 f609c16
-| |/ / / / /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-|/| | | | |   Date:   Thu Dec 8 16:16:54 2022 +0900
-| | | | | |   
-| | | | | |       Merge branch 'main' into yosida-diary-add
-| | | | | |   
-* | | | | |   commit f609c16369f79d200913e137a9314032b3744c65
-|\ \ \ \ \ \  Merge: 790b262 8e2b77b
-| | | | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-| | | | | | | Date:   Thu Dec 8 16:13:51 2022 +0900
-| | | | | | | 
-| | | | | | |     Merge pull request #3 from 2022AIT-OOP2-G11/makimura-diary-add
-| | | | | | |     
-| | | | | | |     add diary　まきむら
-| | | | | | |   
-| * | | | | |   commit 8e2b77b817b3cd516f9bf20a4867f6580eae3492 (origin/makimura-diary-add)
-| |\ \ \ \ \ \  Merge: 5528076 790b262
-| |/ / / / / /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-|/| | | | | |   Date:   Thu Dec 8 16:13:25 2022 +0900
-| | | | | | |   
-| | | | | | |       Merge branch 'main' into makimura-diary-add
-| | | | | | | 
-| * | | | | | commit 552807661c86c203733475162255915aa22ebf49
-| | | | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-| | | | | | | Date:   Thu Dec 8 15:57:15 2022 +0900
-| | | | | | | 
-| | | | | | |     add diary
-| | | | | | | 
-| | * | | | | commit a73ffd75ce4062ab684c6782d1bbe3a14f4a6846
-| |/ / / / /  Author: Yuuri-0708 <yuuri2313@gmail.com>
-| | | | | |   Date:   Thu Dec 8 15:57:15 2022 +0900
-| | | | | |   
-| | | | | |       よしだの日記を新規追加
-| | | | | | 
-| | * | | | commit c8281f8ff471bd3657a33f9340a7aa4b81bb2b3c
-| |/ / / /  Author: nano-33 <k21081kk@aitech.ac.jp>
-| | | | |   Date:   Thu Dec 8 15:53:46 2022 +0900
-| | | | |   
-| | | | |       どいの日記
-| | | | |   
-| | * | |   commit b13985e9eb603d43896c0d5795f6912ac691da93
-| | |\ \ \  Merge: 71c1d64 790b262
-| |_|/ / /  Author: N-Tomonari <105479919+N-Tomonari@users.noreply.github.com>
-|/| | | |   Date:   Thu Dec 8 16:09:18 2022 +0900
-| | | | |   
-| | | | |       Merge branch 'main' into Nagata-add-diary
-| | | | |   
-* | | | |   commit 790b26280caab1d8fede9cf46e24b7d1a0a9086e
-|\ \ \ \ \  Merge: b3b31fc 4141d68
-| |/ / / /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-|/| | | |   Date:   Thu Dec 8 15:58:57 2022 +0900
-| | | | |   
-| | | | |       Merge pull request #1 from 2022AIT-OOP2-G11/sakaguchi-disry-add
-| | | | |       
-| | | | |       阪口の日記を新しく追加
-| | | | | 
-| * | | | commit 4141d680a0bd610ab78185f10115d6b14affc7b1
-|/ / / /  Author: Pengin <fierce0728birds@gmail.com>
-| | | |   Date:   Thu Dec 8 15:53:53 2022 +0900
-| | | |   
-| | | |       阪口の日記を新しく追加
-| | | | 
-| * | | commit 71c1d64f4d064d1ad72f8f1fd971257e65b9fab7
-|/ / /  Author: k20235nagata <miru10yuzu@gmail.com>
-| | |   Date:   Thu Dec 8 15:53:34 2022 +0900
-| | |   
-| | |       永田の日記新規追加
-| | | 
-| * | commit 74a35f2209829be3374ad670fe8a547365bba277
-|/ /  Author: kuzuyatowa <k21045kk@aitech.ac.jp>
-| |   Date:   Thu Dec 8 15:59:37 2022 +0900
-| |   
-| |       葛谷の日記を新規追加
+| |     解答を参考に一部作成しました。
 | | 
-| * commit 75e1f5a13822d5a3403b6c5de0126811f1b45756
-|/  Author: rinrintyan <k21108kk@aitech.ac.jp>
-|   Date:   Thu Dec 8 16:17:26 2022 +0900
+| * commit 90e3388db85566b04d75ac9fb3228150c56ce0e2 (origin/anser_reference)
+| | Author: k20235nagata <miru10yuzu@gmail.com>
+| | Date:   Tue Dec 20 23:30:52 2022 +0900
+| | 
+| |     解答に合わせて作成
+| |     
+| |     解答に合わせてHTMLを作成しました。
+| | 
+| * commit 09fffe96c955a361a5ac1670be58c7b32c0a41db
+|/  Author: k20235nagata <miru10yuzu@gmail.com>
+|   Date:   Tue Dec 20 23:30:07 2022 +0900
 |   
-|       前野日記新規追加
+|       解答を参考に作成
+|       
+|       解答を参考に作成しました
 | 
-* commit b3b31fc864906e7e28b0adae4cd11b67b43c1d10
+* commit e43ae408ccdc50d8d0a0edc442777ebbd589d0bf
 | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-| Date:   Thu Dec 8 15:29:18 2022 +0900
+| Date:   Fri Dec 16 09:49:08 2022 +0900
 | 
-|     サンプル、メインファイルを追加
+|     Update README.md
+|   
+*   commit 3644f17cce0592953674a159ad311b77e2d5e3a7
+|\  Merge: 946b006 4cb0f74
+| | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | Date:   Fri Dec 16 08:22:20 2022 +0900
+| | 
+| |     Merge pull request #14 from 2022AIT-OOP2-G11/web_widow
+| |     
+| |     flask側追加
+| | 
+| * commit 4cb0f746761797a3684c41ae5b74febbb6aa9c23 (origin/web_widow, web_widow)
+| | Author: Yuri-0708 <yuuri2313@gmail.com>
+| | Date:   Thu Dec 15 16:10:15 2022 +0900
+| | 
+| |     main修正
+| | 
+| * commit 0d3748e6b4a64fd5fb6e53d48047d97b67b4ac3a
+| | Author: Yuri-0708 <yuuri2313@gmail.com>
+| | Date:   Thu Dec 15 15:18:24 2022 +0900
+| | 
+| |     修正
+| | 
+| * commit 3c3be230e98b35a467017986342f9287eafa1dd0
+| | Author: Yuri-0708 <yuuri2313@gmail.com>
+| | Date:   Thu Dec 15 15:05:11 2022 +0900
+| | 
+| |     Update main.py
+| | 
+| * commit 43e84c12003b6500e0940f4d5acd29b278635d6c
+| | Author: k20235nagata <miru10yuzu@gmail.com>
+| | Date:   Thu Dec 15 15:43:31 2022 +0900
+| | 
+| |     HTMLコード変更
+| |     
+| |     送信とメッセージのコード追加
+| |   
+| *   commit 31bb1ce0da862ba3a4173585fcd132919975d4c8
+| |\  Merge: dd7e638 ebed70d
+| | | Author: k20235nagata <miru10yuzu@gmail.com>
+| | | Date:   Thu Dec 15 15:04:26 2022 +0900
+| | | 
+| | |     Merge branch 'web_widow' of https://github.com/2022AIT-OOP2-G11/oop2_11 into web_widow
+| | | 
+| * | commit dd7e638f4962c61bd9f54562714b469be3a43a5d
+| | | Author: k20235nagata <miru10yuzu@gmail.com>
+| | | Date:   Thu Dec 15 15:04:23 2022 +0900
+| | | 
+| | |     インターフェース追加
+| | |     
+| | |     ファイル選択と送信メッセージ追加
+| | | 
+* | | commit 946b0063522936995526fc9cdf77ffb9e1512005
+| | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | Date:   Thu Dec 15 23:04:55 2022 +0900
+| | | 
+| | |     observer.pyをちょこっと修正
+| | |   
+* | |   commit e2bfae52c5f7c886b9b16aef7ad36955fd671b00
+|\ \ \  Merge: 3373a0d 0fb4bac
+| | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | | Date:   Thu Dec 15 18:05:46 2022 +0900
+| | | | 
+| | | |     Merge branch 'main' of https://github.com/2022AIT-OOP2-G11/oop2_11
+| | | |   
+| * | |   commit 0fb4bac0e2769d99403fffdcb4ee56dbf5c11530
+| |\ \ \  Merge: d4d905c 9bb579f
+| | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | | | Date:   Thu Dec 15 18:05:06 2022 +0900
+| | | | | 
+| | | | |     Merge pull request #13 from 2022AIT-OOP2-G11/takoyaki
+| | | | |     
+| | | | |     a.pyついかしました！！！
+| | | | | 
+| | * | | commit 9bb579fbc1563b7f5fa055c6f7ab2f6b14c53f8e (origin/takoyaki)
+| | | | | Author: kuzuyatowa <k21045kk@aitech.ac.jp>
+| | | | | Date:   Thu Dec 15 16:25:48 2022 +0900
+| | | | | 
+| | | | |     a.pyついかしました！！！
+| | | | | 
+* | | | | commit 3373a0d599f35e7c5292652a2cf444f1d7813ec3
+|/ / / /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | |   Date:   Thu Dec 15 18:05:42 2022 +0900
+| | | |   
+| | | |       Delete a.py
+| | | |   
+* | | |   commit d4d905c44dec4b9948a720106c478fbb99cc4ab9
+|\ \ \ \  Merge: 35fcfd1 bd93a86
+| |/ / /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+|/| | |   Date:   Thu Dec 15 18:00:00 2022 +0900
+| | | |   
+| | | |       Merge pull request #12 from 2022AIT-OOP2-G11/takoyaki
+| | | |       
+| | | |       名前残し！！！！！
+| | | | 
+| * | | commit bd93a86f11259d5d141165cc52d0848782f6fe1f
+| | | | Author: kuzuyatowa <k21045kk@aitech.ac.jp>
+| | | | Date:   Thu Dec 15 16:25:48 2022 +0900
+| | | | 
+| | | |     a.pyついかしました！！！
+| | | | 
+* | | | commit 35fcfd1286b42dab9b4b716809c61f43d9ba4143
+| | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | | Date:   Thu Dec 15 17:56:50 2022 +0900
+| | | | 
+| | | |     observer.pyをちょっと修正しました
+| | | |   
+* | | |   commit 47255986c34f44aa54225f2e624279f0d98a0e98
+|\ \ \ \  Merge: b0e7801 e12798a
+| |/ / /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+|/| | |   Date:   Thu Dec 15 17:53:11 2022 +0900
+| | | |   
+| | | |       Merge pull request #11 from 2022AIT-OOP2-G11/frame_face
+| | | |       
+| | | |       関数足しました
+| | | | 
+| * | | commit e12798aa2a2c8064845917017d37e634080f8e4d (origin/frame_face)
+| | | | Author: nano-33 <k21081kk@aitech.ac.jp>
+| | | | Date:   Thu Dec 15 16:06:27 2022 +0900
+| | | | 
+| | | |     関数足しました
+| | | |   
+| * | |   commit 851870991ccdd1331fd649ca373e7ceaad5ac5b4
+| |\ \ \  Merge: 5249907 9226282
+| | | | | Author: nano-33 <k21081kk@aitech.ac.jp>
+| | | | | Date:   Thu Dec 15 15:46:48 2022 +0900
+| | | | | 
+| | | | |     Merge branch 'main' into frame_face
+| | | | | 
+* | | | | commit b0e7801b4b85c430f575d0299bfb3784aa341cf3
+| | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | | | Date:   Thu Dec 15 16:05:16 2022 +0900
+| | | | | 
+| | | | |     canny.pyをメインブランチから追加しました。
+| | | | | 
+* | | | | commit 01cdb31a547f0900c8eddeeeee8f9c9d94acf392
+|\| | | | Merge: 1896dea 5249907
+| | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | | | Date:   Thu Dec 15 15:54:51 2022 +0900
+| | | | | 
+| | | | |     Merge pull request #9 from 2022AIT-OOP2-G11/frame_face
+| | | | |     
+| | | | |     顔に枠つけました
+| | | | | 
+| * | | | commit 524990747067b80a1d7fd9e5e62b1ff0681f9af8
+| | | | | Author: nano-33 <k21081kk@aitech.ac.jp>
+| | | | | Date:   Thu Dec 15 15:33:45 2022 +0900
+| | | | | 
+| | | | |     顔に枠つけました
+| | | | |   
+* | | | |   commit 1896dea5fef6db45aad1fd53bfa66e20812ce2a5
+|\ \ \ \ \  Merge: 9226282 ed2d7ad
+| |_|/ / /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+|/| | | |   Date:   Thu Dec 15 15:51:32 2022 +0900
+| | | | |   
+| | | | |       Merge pull request #7 from 2022AIT-OOP2-G11/mosaic
+| | | | |       
+| | | | |       モザイク処理&関数化
+| | | | | 
+| * | | | commit ed2d7ad0a8ef2f1fbb0e617f3a346de371e4a4f5 (origin/mosaic)
+| | | | | Author: Pengin <fierce0728birds@gmail.com>
+| | | | | Date:   Thu Dec 15 15:43:19 2022 +0900
+| | | | | 
+| | | | |     関数に写した
+| | | | | 
+| * | | | commit 4b0945c16db541718cf7b7d5ec36e42ebadc4a5e
+| | | | | Author: Pengin <fierce0728birds@gmail.com>
+| | | | | Date:   Thu Dec 15 15:38:31 2022 +0900
+| | | | | 
+| | | | |     パスなんか変えた
+| | | | | 
+| * | | | commit b8726332b571948f2d20767363af1d735705e830
+| | | | | Author: Pengin <fierce0728birds@gmail.com>
+| | | | | Date:   Thu Dec 15 15:21:09 2022 +0900
+| | | | | 
+| | | | |     関数化
+| | | | | 
+| * | | | commit 9545bf77f6f9d371544f59c25d8af8e8337d9b65
+| | | | | Author: Pengin <fierce0728birds@gmail.com>
+| | | | | Date:   Thu Dec 15 15:10:12 2022 +0900
+| | | | | 
+| | | | |     モザイク処理追加
+| | | | |   
+* | | | |   commit 922628297c4194e33e0e4c5e51c63b46e8b9f84a
+|\ \ \ \ \  Merge: ce0bf50 d724dae
+| | | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | | | | Date:   Thu Dec 15 15:28:58 2022 +0900
+| | | | | | 
+| | | | | |     Merge pull request #8 from 2022AIT-OOP2-G11/observer
+| | | | | |     
+| | | | | |     Observer
+| | | | | | 
+| * | | | | commit d724dae09245ad22c04a4c18adc6acae97476c7c (origin/observer)
+| | | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | | | | Date:   Thu Dec 15 15:23:42 2022 +0900
+| | | | | | 
+| | | | | |     フォルダを監視するプログラムを追加しました
+| | | | | | 
+| * | | | | commit 636a59afebd97bc14aad8d11856f1f83d1ab424a
+| | | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | | | | Date:   Thu Dec 15 14:56:24 2022 +0900
+| | | | | | 
+| | | | | |     add observer
+| | | | | |   
+* | | | | |   commit ce0bf50732883893e94b2e34529834a78b2f5928
+|\ \ \ \ \ \  Merge: a28b7e6 6c3110b
+| | | | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | | | | | Date:   Thu Dec 15 15:28:33 2022 +0900
+| | | | | | | 
+| | | | | | |     Merge pull request #6 from 2022AIT-OOP2-G11/grayscale
+| | | | | | |     
+| | | | | | |     グレースケールできました
+| | | | | | | 
+| * | | | | | commit 6c3110ba684bb4aaa15cc8b9ec23f0c887bdacb2 (origin/grayscale)
+| | |_|/ / /  Author: rinrintyan <k21108kk@aitech.ac.jp>
+| |/| | | |   Date:   Thu Dec 15 15:21:18 2022 +0900
+| | | | | |   
+| | | | | |       グレースケールできました
+| | | | | |   
+* | | | | |   commit a28b7e62564200fbe672f27fa2d266a6a4606cf7
+|\ \ \ \ \ \  Merge: f362b24 ebed70d
+| | |_|_|_|/  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| |/| | | |   Date:   Thu Dec 15 14:55:56 2022 +0900
+| | | | | |   
+| | | | | |       Merge pull request #5 from 2022AIT-OOP2-G11/web_widow
+| | | | | |       
+| | | | | |       main.pyの修正
+| | | | | | 
+| * | | | | commit ebed70d6ca478585d1ab9c30a580380ee52f67c7
+| | |_|_|/  Author: Yuri-0708 <yuuri2313@gmail.com>
+| |/| | |   Date:   Thu Dec 15 14:51:34 2022 +0900
+| | | | |   
+| | | | |       Update main.py
+| | | | |   
+| * | | |   commit 9cf76277dd6328e6f66d99bdf4ba1eb28a12a5b0
+| |\ \ \ \  Merge: e9fd9fb 4ae339c
+| | | | | | Author: k20235nagata <miru10yuzu@gmail.com>
+| | | | | | Date:   Thu Dec 15 14:29:01 2022 +0900
+| | | | | | 
+| | | | | |     Merge branch 'main' into web_widow
+| | | | | | 
+| * | | | | commit e9fd9fbb78e0b69413b7cbff96103b4487dfade5
+| | | | | | Author: k20235nagata <miru10yuzu@gmail.com>
+| | | | | | Date:   Thu Dec 15 14:22:21 2022 +0900
+| | | | | | 
+| | | | | |     HTML追加
+| | | | | |     
+| | | | | |     HTMLのテンプレートを追加
+| | | | | | 
+| * | | | | commit 1b304141eedd146cb106961405f36c4114f87beb
+| | | | | | Author: k20235nagata <miru10yuzu@gmail.com>
+| | | | | | Date:   Thu Dec 15 14:13:42 2022 +0900
+| | | | | | 
+| | | | | |     追加と削除
+| | | | | |     
+| | | | | |     HTMLにわかりやすい名前をつけてテンプレートを再作成しました。
+| | | | | | 
+| * | | | | commit 9378858b80154c2a6000c40711b6e7afcf96b6c9
+| | | | | | Author: k20235nagata <miru10yuzu@gmail.com>
+| | | | | | Date:   Thu Dec 15 14:04:20 2022 +0900
+| | | | | | 
+| | | | | |     HTMLテンプレート追加
+| | | | | |     
+| | | | | |     HTMLのテンプレートを追加しました。
+| | | | | |   
+* | | | | |   commit f362b24de8bfa9ba4f70b1d89b87a098107f29a8
+|\ \ \ \ \ \  Merge: fd4648c 6bff5d6
+| |_|_|_|/ /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+|/| | | | |   Date:   Thu Dec 15 14:38:30 2022 +0900
+| | | | | |   
+| | | | | |       Merge pull request #4 from 2022AIT-OOP2-G11/edit_readme
+| | | | | |       
+| | | | | |       Update README.md
+| | | | | | 
+| * | | | | commit 6bff5d6bf2664f961d303ef7f18989591b9799f6 (origin/edit_readme)
+| | | | | | Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | | | | Date:   Thu Dec 15 14:38:06 2022 +0900
+| | | | | | 
+| | | | | |     Update README.md
+| | | | | | 
+* | | | | | commit fd4648c98fd5c1c6cbca3e030b2ff37ed7fb251b
+|\| | | | | Merge: 4ae339c 44cf5ce
+| |_|/ / /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+|/| | | |   Date:   Thu Dec 15 14:36:53 2022 +0900
+| | | | |   
+| | | | |       Merge pull request #3 from 2022AIT-OOP2-G11/edit_readme
+| | | | |       
+| | | | |       Update README.md
+| | | | | 
+| * | | | commit 44cf5cefb03203159be88127555df4a96819f24c
+|/ / / /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+| | | |   Date:   Thu Dec 15 14:36:02 2022 +0900
+| | | |   
+| | | |       Update README.md
+| | | | 
+* | | | commit 4ae339cf95a6ea13ec7232945f90414a3ac8aa75
+|\| | | Merge: 8196690 149a456
+| |/ /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+|/| |   Date:   Thu Dec 15 13:59:49 2022 +0900
+| | |   
+| | |       Merge pull request #2 from 2022AIT-OOP2-G11/web_widow
+| | |       
+| | |       Create main.py
+| | | 
+| * | commit 149a456ff59d7108c7528648ac7329ef6ae4e3d1
+| | | Author: Yuri-0708 <yuuri2313@gmail.com>
+| | | Date:   Thu Dec 15 13:53:17 2022 +0900
+| | | 
+| | |     Create main.py
+| | |   
+* | |   commit 819669038ca967d78c50187cca167e1a5f2bb027
+|\ \ \  Merge: a970b39 06fbd9c
+| |/ /  Author: makim0939 <95673492+makim0939@users.noreply.github.com>
+|/| /   Date:   Thu Dec 15 13:51:47 2022 +0900
+| |/    
+| |         Merge pull request #1 from 2022AIT-OOP2-G11/mosaic
+| |         
+| |         フォルダの追加
+| | 
+| * commit 06fbd9c272aa3d64e8faa3ceee189460efc4f85f
+|/  Author: Pengin <fierce0728birds@gmail.com>
+|   Date:   Thu Dec 15 13:50:30 2022 +0900
+|   
+|       フォルダの追加
 | 
-* commit 7f04dd513f1125628e34d5243093b6e2d7dfa672
-| Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-| Date:   Thu Dec 8 15:25:14 2022 +0900
-| 
-|     日記抽象クラスをつくった
-| 
-* commit 1c4460b48b2f839e3070086c89d46558fc4d8188
+* commit a970b3939703c7e7de65c687ce4a7644473b5fed (origin/cannyfilter)
   Author: makim0939 <95673492+makim0939@users.noreply.github.com>
-  Date:   Thu Dec 8 15:19:34 2022 +0900
+  Date:   Thu Dec 15 13:27:07 2022 +0900
   
       Initial commit
+ </pre>
 
-</pre>
-
-
-## 3. Git及びGitHubに関する調査
-
-以下の各項目について、インターネットや書籍を利用し調べ、自分なりの言葉で説明をしてください。(参考文献等あればそれも記載すること)
-
-### 3-1. Gitを始めとしたバージョン管理システムを利用することによるメリットはなにか
-複数人で共同で作業を行う場合に「誰が」「いつ」「どこ」の箇所を修正したか、なぜその修正を行ったかなどを記録し、<br>
-必要があれば修正履歴を辿ることで過去のある状態に戻ることが可能となる。<br>
-
-### 3-2. Gitにおけるキーワード「clone」「commit」「push」「branch」「fetch」「pull」「merge」「rebase」についてそれぞれ何をするものか (他者に説明できるよう、わかりやすく簡潔な文章で表すこと)
-#### 「clone」
-他者が作成したgitの既存のリモートリポジトリを自身のローカルリポジトリにコピーする。<br>
-リモートリポジトリ : インターネット上に公開されているgitのリポジトリ<br>
-ローカルリポジトリ : ローカル上に存在するgitのリポジトリ<br>
-
-#### 「commit」
-①(バージョンを新しく登録するファイルをまとめ)、②(自身のローカルリポジトリに最新のバージョンとして登録する。)<br>
-①の処理はadd<br>
-②の処理はcommit<br>
-
-#### 「push」
-commitしたローカルリポジトリの指定したブランチをリモートリポジトリに登録する。
-
-#### 「branch」
-リポジトリを作業者や機能ごとに分割するための仕組み
-
-#### 「fetch」
-ローカルリポジトリに存在しないブランチを更新する。(ここでローカルリポジトリに作成されるのはリモート追跡ブランチであるため、自身で操作することはできない。)
-
-#### 「pull」
-リモートリポジトリの内容をローカルリポジトリにコピーする。
-
-#### 「merge」
-リポジトリに存在する指定した複数のブランチの変更内容を合成する。
-マージには2つの種類があり、それぞれ直線的な処理に対して、先の処理に対してブランチを移動するのみでcommitオブジェクトを新しく作成しないmergeと分岐した処理を1つにまとめ新しいcommitオブジェクトを生成するmergeという2つの種類がある。
-
-#### 「rebase」
-commitを指定したブランチで作り直すことにより、ログをきれいにして見やすくするための仕組み
-
-
-### 3-3. プロジェクト進行に、Pull Requestを用いたGitHub Flowを採用することで、解決できるチーム開発での問題はなにか (実際にGitHub Flowで作業する手順も説明できる範囲でする)
-問題 : mainブランチを本番環境とすることで、ログの解析をしやすくし万が一バグが発生した場合に簡単に修正を行うことができる。<br>
-手順 : リモートリポジトリのmainブランチをローカルリポジトリのmain以外の任意のブランチにfetchを行う。<br>
-      その後、ローカルリポジトリの任意のブランチをリモートリポジトリにpull requestを行い、レビューが完了したタイミングでmainブランチに統合することで常にmainブランチを最新の状態に保つことができる。
-n
-
+4. 感想 (次に活かせる反省等あればここに書いておくと良い)
+　今回、グループワークでWebインタフェースを担当し、webインタフェース側担当グループのみでもソースファイルの名前やinputタグのname属性の名前など共有しなければならない情報が多く、一人で作業する場合と比較し、難しさを感じました。また、エラーが発生した場面などでグループメンバー複数が1つのエラーの解決に当たっているという状況が発生しました。これにより作業がストップしてしまったため、次の作業時からは分担を徹底して行い無駄な時間を発生させないよう心がけたいです。
+　この１週間の期間でグループで自由課題の内容を決定しました。リーダーがかなり頼もしく指揮をおこなってくれているため、できる範囲で補助して取り組んでいきます。
+![image](https://user-images.githubusercontent.com/83294271/209032266-f4997d69-bf36-4712-a19f-d49e9959f556.png)
