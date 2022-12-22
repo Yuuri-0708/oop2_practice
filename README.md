@@ -5,9 +5,6 @@ Yuri-0708<br><br>
 Webインタフェースを担当しました。<br>
 Flaskを利用し、他のメンバーが作成したhtmlファイルへのルーティング処理を記述し、ファイルの保存を行う処理を記述しました。<br>(前回の時間では、ファイルの保存を行う処理の中でエラーが発生して作業がストップしてしまいました。)<br>
 3. チーム作業のログ<br>
-mainブランチを最新の状態にして $ git --no-pager log --graph
-した結果を <pre> タグと組み合わせて貼り付ける
-
 <pre>
 *   commit 36716edb8b76089137b72046ad9de4b8dde46bfa (HEAD -> main, origin/main, origin/HEAD)
 |\  Merge: e43ae40 90e3388
